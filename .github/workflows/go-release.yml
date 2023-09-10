@@ -1,10 +1,9 @@
-
 name: go-release
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:

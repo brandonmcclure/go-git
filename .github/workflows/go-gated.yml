@@ -1,11 +1,10 @@
-
 name: go-gated
 
 on:
   workflow_dispatch:
   pull_request:
     branches:
-      - master  # Trigger gated pipeline on PR to main
+      - main 
 
 jobs:
   build:
@@ -29,4 +28,3 @@ jobs:
           args: release --clean --snapshot
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
